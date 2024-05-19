@@ -1,0 +1,162 @@
+/* upload.css */
+body {
+    font-family: 'Arial', sans-serif;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* max-width: fit-content; */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Disable scrolling for the entire page */
+  }
+  button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: solid;
+    border-width: 0.1rem;
+    border-radius: 0.8rem;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  #uploadForm{
+    position: relative;
+    width: 40%;
+    left: 30%;
+  }
+  #submitBtn{
+    margin-left: 50px;
+  }
+  #openBtn{
+    position: fixed;
+    right: 2%;
+    top: 2%;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border: solid;
+    border-width: 0.1rem;
+    border-radius: 0.8rem;
+    font-size: 16px;
+    width: 15%;
+    min-width: 30px;
+  }
+  
+  
+  
+  
+  #analysisText {
+    margin: 0;
+    text-align: left;
+    font-family: "Roboto Mono", monospace;
+    white-space: pre-wrap; /* Wrap text within pre tags */
+    word-wrap: break-word; /* Break long words */
+  }
+  #textDiv {
+    position: fixed;
+    margin-bottom: 3%;
+    max-width: 100%;
+    max-height: 98%; /* Set maximum height for the content container */
+    overflow: auto; /* Enable vertical scrolling if content overflows */
+    padding-left: 30px; /* Add padding to the content container */
+  }
+  
+  #uploadBtn {
+    display: flex;
+    position:fixed;
+    top: 3%;
+    right:4%;
+    height: 7%;
+    padding-top: 0.8%;
+    padding-left: 3%;
+    }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+  }
+  .modal-content {
+    position: relative;
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 0.8rem;
+    width: 10%;
+    top: 20%;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #uploadDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #openModalBtn{
+    margin-left: 10px;
+  }
+  
+  /* Media query for narrow screens */
+  @media (max-width: 600px) {
+    #button {
+      width: auto; /* Change width to auto to fit the content */
+      height: 60px;
+    }
+    #uploadDiv {
+      display: flex;
+      flex-direction: column; /* Change flex direction to column */
+      align-items: center; /* Center align items */
+      padding: 10%;
+      max-width: fit-content;
+      position: relative; /* Change position to relative */
+    }
+  
+    #file-name {
+      padding-right: 2%;
+    }
+    #fileInput {
+      width: auto; /* Change width to auto to fit the content */
+      margin-top: 10px; /* Add some margin to separate from other elements */
+    }
+  
+  }
+  /* Define the styles for the scrollbar */
+::-webkit-scrollbar {
+    width: 12px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #d3d3d3;
+    border-radius: 8px; 
+  }
+  
+  ::-webkit-scrollbar-corner {
+    background: #e9d7d7; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3; 
+  }

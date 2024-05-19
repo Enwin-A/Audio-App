@@ -1,0 +1,9 @@
+runtime: python310  # Replace with the appropriate Python version you're using
+
+env: flex  # Use the flexible environment for scaling on demand
+
+service: default  # Replace with your desired App Engine service name
+
+instance_class: F1  # Adjust instance class based on your resource needs
+
+entrypoint: python manage.py runserver

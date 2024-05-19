@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="static/results.css">
+    <link rel="icon" href="static/audio.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+</head>
+<body>
+    <!-- Popup Modal -->
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="uploadForm" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form }}
+                <button id="submitBtn" type="submit" style="margin-left: 5%;">Upload</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Hidden file input to trigger file selection -->
+    <input type="file" id="fileInput" style="display: none;" />
+    <div class="navi-bar">
+    </div>
+    <div id="textDiv">
+        <h1>Transcript</h1>
+        <pre id="analysisText">{{ text }}</pre>
+        <br>
+        <br>
+        <h1>Sentiment Analysis</h1>
+        <pre id="analysisText">{{ sentiment_analysis }}</pre>
+    </div>
+
+    <!-- Button to trigger file upload popup -->
+    <button id="openModalBtn" style="position: fixed; top: 2%; right: 2%;">Upload Audio File</button>
+
+
+    <script src="static/popup.js"></script>
+</body>
+</html>
